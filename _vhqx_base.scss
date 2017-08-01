@@ -1,0 +1,40 @@
+.vhqx {
+  position: relative;
+  clear: both;
+  font-size: 0;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  a {
+    display: block;
+    text-decoration: none;
+  }
+}
+
+.vhqx-item {
+  position: relative;
+  display: block;       // 移动优先
+  margin: 0;
+  padding: 0;
+  background-clip: border-box;
+  text-align: center;
+}
+
+// PC上展开
+@media screen and (min-width: 40rem) {
+  .vhqx {
+    text-align: justify;
+  }
+  .vhqx-item {
+    display: inline-block;
+
+    &.float-left {
+      float: left;
+    }
+    &.float-right {
+      float: right;
+    }
+  }
+}
+

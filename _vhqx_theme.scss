@@ -1,0 +1,38 @@
+@mixin vhqx_theme() {
+  $vhqx_bgcolor: #555 !default;
+  $vhqx_color: #e0e0e0 !default;
+
+  $vhqx_hover_bgcolor: #777 !default;
+  $vhqx_hover_color: #e0e0e0 !default;
+
+  $vhqx_active_bgcolor: #62a2d2 !default;
+  $vhqx_active_color: #e0e0e0 !default;
+
+  .vhqx {
+    background: $vhqx_bgcolor;
+  }
+
+  .vhqx-item {
+    line-height: 3rem;
+    font-size: 1rem;
+
+    & a {
+      background-color: $vhqx_bgcolor;
+      color: $vhqx_color;
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+
+    & a:hover {
+      background-color: $vhqx_hover_bgcolor;
+      color: $vhqx_hover_color;
+    }
+
+    &.active a {
+      background-color: $vhqx_active_bgcolor;
+      color: $vhqx_active_color;
+    }
+  }
+}
+
+@include vhqx_theme();
